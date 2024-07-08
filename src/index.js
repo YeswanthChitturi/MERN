@@ -9,6 +9,7 @@ import About from './components/About';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <div>
+    <div><h1>Hiiii</h1></div>
  <Router>
  <Navbar/>
  <Routes>
