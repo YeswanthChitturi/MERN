@@ -1,39 +1,66 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Navbar(){
- return(
- <div>
-<nav class="bg-blue-600 border-gray-200 dark:bg-gray-900">
- <div class="max-w-screen-xl flex flex-wrap items-center justifybetween mx-auto p-4">
- <a href="" class="flex items-center space-x-3 rtl:space-xreverse">
- <img src="https://th.bing.com/th/id/OIP.U-1wslZboPUMq-1gAhGWGgHaHJ?w=189&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
- class="h-10 w-14" alt="Blogging SIte" />
- <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Bloggy</span>
- </a>
- <button data-collapse-toggle="navbar-default" type="button"
-class="inline-flex items-center p-2 w-10 h-10 justify-center textsm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:textgray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" ariacontrols="navbar-default" aria-expanded="false">
- <span class="sr-only">Open main menu</span>
- <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
- <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M113h15"/>
- </svg>
- </button>
- <div class="hidden w-full md:block md:w-auto" id="navbardefault">
- <ul class=" text-white font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 md:flex-row md:space-x-8 rtl:spacex-reverse md:mt-0 md:border-0 ">
 
- <li>
- <Link to='/about'> About</Link>
- </li>
- <li>
- <Link to='/register'> Register</Link>
- </li>
- <li>
- <Link to='/login'>Login</Link>
- </li>
-
- </ul>
- </div>
- </div>
-</nav>
- </div>
- )
+export default function Navbar() {
+  return (
+    <div>
+      <nav className="bg-blue-600 border-gray-200 dark:bg-gray-900">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <img
+              src="https://www.cmarix.com/blog/wp-content/uploads/2020/06/MERN-Stack.jpg"
+              className="h-10 w-14"
+              alt="Blogging Site"
+            />
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+              MERN STACK PROJECT
+            </span>
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul className="text-white font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:ml-auto">
+              <li>
+                <Link to="/about" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/register" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0">
+                  Register
+                </Link>
+              </li>
+              <li>
+                <Link to="/login" className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0">
+                  Login
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
 }
